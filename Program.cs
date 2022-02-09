@@ -1,10 +1,7 @@
-﻿string nome = "Arus";
-int level = 12;
-string tipoHeroi = "Guerreiro";
+﻿using RPG.src.Entities;
 
-string nome2 = "Wedget";
-int level2 = 20;
-string tipoHeroi2 = "Ninja";
+Hero arus = new Hero("Arus", 12, "Knight");
+Wizard jenica = new Wizard("Jenica", 23, "White Wizard");
 
-Console.WriteLine($"{nome} {level} {tipoHeroi}");
-Console.WriteLine($"{nome2} {level2} {tipoHeroi2}");
+Console.WriteLine(jenica.Attack());
+Console.WriteLine(arus.Attack());
