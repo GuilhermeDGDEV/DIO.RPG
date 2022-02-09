@@ -1,18 +1,15 @@
 namespace RPG.src.Entities
 {
-    public class Hero
+    public abstract class Hero
     {
         public string? Name { get; set; }
         public int Level { get; set; }
         public string? HeroType { get; set; }
 
-        public Hero() {}
-
-        public Hero(string name, int level, string heroType)
+        public Hero(string name, int level)
         {
             Name = name;
             Level = level;
-            HeroType = heroType;
         }
 
         public override string ToString()
@@ -20,9 +17,6 @@ namespace RPG.src.Entities
             return $"Name: {Name} \nLevel: {Level} \nHero type: {HeroType}";
         }
 
-        public virtual string Attack()
-        {
-            return Name + " atacou com sua espada!";
-        }
+        public abstract string Attack();
     }
 }
